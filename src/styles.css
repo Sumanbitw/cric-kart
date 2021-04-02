@@ -36,7 +36,7 @@
   flex-wrap: wrap;
   margin-left: 200px ;
   padding: 0 10px;
- 
+ margin-top: 10rem;
 }
 
 .app-sidebar{
@@ -51,7 +51,7 @@
   right: 5px;
   margin-top: 3rem;
   /* border: 1px solid gray; */
-  background-color: #FEF3C7;
+  background-color:#F3F4F6;
   /* border-right: 2px solid grey; */
 }
 

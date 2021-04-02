@@ -3,84 +3,100 @@
     padding: 0;
     box-sizing: border-box;
 }
-.navbar__app{
+:root{
+    --bg-color : #3F8F74;
+    --bg-white: white;
+    --bg-black: black;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
     min-height: 5rem;
-    background-color:
-    #FCD34D ;
-    position: sticky;
-    top: 0;
+    width: 100vw;
     cursor: pointer;
-    /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.4); */
+    z-index: 10;
+    position: relative;
+    border-bottom: 2px solid var(--bg-color);
 } 
-
-.navbar{
+header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
     cursor: pointer;
+    opacity: 1;
+    background-color:var(--bg-white);
+   
 }
-
-.navbar__right{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    cursor: pointer;
-    margin-top: 1.5rem;
+nav ul{
+    display: inline-flex;
+    margin: 25px 0;
+    padding: 0 50px;
+}
+li{
+    list-style-type: none;
+    margin: 0 5px;
 }
 .navbar__header{
-    margin-top: 1.5rem;
+    margin: 25px 0;
     padding: 0 4rem;
     font-size: 1.6rem;
     font-weight: 700;
 }
-.fa{
-    cursor: pointer;
-}
- .cart__length{
-    position: relative;
-    top: -1.4rem;
-    left: -0.8rem;
-    font-size: 1.4rem;
+.cart__length{
+    position: absolute;
+    top: 7px;
+    right: 85px;
+    padding: 2px 3px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: var(--bg-color);
+    border-radius: 50%;
 } 
 .wishlist__length{
-    position: relative;
-    top: -1.4rem;
-    left: -0.8rem;
-    font-size: 1.4rem; 
+    position: absolute;
+    top: 7px;
+    right: 45px;
+    padding: 2px 3px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: var(--bg-color);
+    border-radius: 50%; 
  } 
-.navbar__input input{
+.navbar__input{
     width: 420px;
     height: 2rem;
-    border: 1px solid white;
+    border: 1px solid var(--bg-white);
     margin-top: 1.5rem;
+    border: 1px solid var(--bg-black);
 }
 .search__icon{
     position: absolute;
-    /* right: 0.5rem; */
     top: 2rem;
-    left: 50rem;
-
+    right: 26rem;
 }
 
-@media screen and (max-width:720px){
+@media screen and (max-width:800px){
     .navbar__input{
         display: none;
     }
-    .navbar__app{
-        min-height: 6rem;
-        display: flex;
+    .search__icon{
+        display: none;
     }
-    .navbar__header{
-        font-size: 1.2rem;
+    nav{
+        position: relative;
     }
     .cart__length{
-        position: relative;
-        top: -1.5rem;
-        left: -0.9rem;
+        position: absolute;
+        top: 10px;
+        right: 85px;
     }
     .wishlist__length{
-        position: relative;
-        top: -1.4rem;
-        left: -0.9rem;
+        position: absolute;
+        top: 10px;
+        right: 47px;
     }
 }

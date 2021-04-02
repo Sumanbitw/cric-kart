@@ -12,9 +12,7 @@ export default function App() {
   const {route} = useCart()
   return (
     <div className="app">
-      <div className="navbar__app">
         <Navbar />
-        </div> 
         <div className="app__body">
         {route==="cart" && <Cart/>}
         {route==="products" && <ProductListing/>}

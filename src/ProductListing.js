@@ -95,6 +95,7 @@ function ProductListing() {
               </div>
           </div>
             <div className="app-cart">
+            {/* <h1>Products</h1> */}
                 {filteredData.map((item) => (
                 <Card 
                 id={item.id} 
