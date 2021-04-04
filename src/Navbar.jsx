@@ -17,8 +17,8 @@ export default function Navbar (){
                 <BiSearch className="search__icon" size={20}/>
             
               <ul>
-                <li  onClick={()=>setRoute("cart")}><AiOutlineShoppingCart size={30} cursor="pointer"/><b className="cart__length"> {itemsInCart.length}</b></li>
-                <li  onClick={()=>setRoute("wishlist")}><AiOutlineHeart size={30} cursor="pointer"/><b className="wishlist__length">{wishList.length}</b></li> 
+                <li  onClick={()=>setRoute("cart")}><AiOutlineShoppingCart size={30} cursor="pointer"/><span className="cart__icon"><b> {itemsInCart.length}</b></span></li>
+                <li  onClick={()=>setRoute("wishlist")}><AiOutlineHeart size={30} cursor="pointer"/><span className="cart__icon"><b>{wishList.length}</b></span></li> 
               </ul>  
           </nav>
         </header>  

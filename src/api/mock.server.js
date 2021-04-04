@@ -24,6 +24,7 @@ export default function setupMockServer() {
         server.create("product", {
           id: faker.random.uuid(),
           name: faker.commerce.productName(),
+          description: faker.commerce.productDescription(),
           image: faker.random.image(),
           price: faker.commerce.price(),
           material: faker.commerce.productMaterial(),
@@ -31,13 +32,15 @@ export default function setupMockServer() {
           inStock: faker.random.boolean(),
           fastDelivery: faker.random.boolean(),
           ratings: faker.random.arrayElement([1, 2, 3, 4, 5]),
+          discount: faker.random.arrayElement([5,10,15,50,17,19]),
+          actualPrice : faker.random.arrayElement([1999,2999,1499,1199,1699]),
           offer: faker.random.arrayElement([
               "Save 50",
-    "70% bonanza",
-    "Republic Day Sale"
-  ]),
-  idealFor: faker.random.arrayElement([
-    "Men",
+            "70% bonanza",
+            "Republic Day Sale"
+                ]),
+          idealFor: faker.random.arrayElement([
+             "Men",
     "Women",
     "Girl",
     "Boy",

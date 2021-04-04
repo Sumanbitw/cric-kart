@@ -1,62 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* #FEF3C7 */
-.cart__container{
-    /* border: 1px solid black; */
-    display: flex;
-    margin: 1rem 5rem;
-    padding: 1rem;
-    width: 50%;
+:root{
+    --bg-green:#2563EB;
+    --bg-white:white;
+    --bg-black:black;
+    --bg-grey:grey;
 }
+.cart__container{
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding: 0.3rem 0.2rem;
 
+}
+.cart__items{
+    display:block;
+    margin: 5% 35%;
+}
 .cart__products{
     display: flex;
     margin: 2rem;
+    /* flex-wrap: wrap; */
 }
 .cart__checkout{
-    /* border: 1px solid black; */
-   margin: 6rem;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   /* margin-right: 20rem; */
+   margin-left: 3rem;
+   margin-top: 7rem;
 }
-.card__header{
-    width: 10px;
+h1{
+    font-family: monospace sans-serif;
+    font-size: 20px;
 }
-
+.cart__header{
+    display: flex;
+    flex-direction:column ;
+    /* flex-wrap: wrap; */
+    margin: 3rem 0;
+    width: 35rem;
+}
+.cart__header ul{
+    border: 1.5px solid var(--bg-green);
+    height: 17rem;
+    margin: 10px 0;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+.cart__list{
+    margin:0;
+}
 .cart__list img{
-    width: 300px;
+    width: 200px;
     height: auto;
 }
 .cart__name{
     margin: 1rem 2rem 2rem 1rem ;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    
+}
+.buttons{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-grow: 3;
+    padding: 2rem 0;
+    border-top: 1px solid grey;
 }
 .cart__price{
-    font-size: 1.3rem;
-    margin: 1rem 2rem;
+    font-size: 1.1rem;
 }
 .cart__item{
-    font-size: 2rem;
+    font-size: 1.4rem;
+    font-family: sans-serif;
 }
-
+.btn__qty{
+    margin: 0.7rem 0;
+}
 .btn-primary{
     margin:1rem;
-    padding: 0.6rem 2rem;
-    border: 1px solid #D97706;
-    font-size: 1.3rem;
-    color: white;
-    background-color:#D97706;
+    padding: 0.3rem;
+    width: 130px;
+    border: 1px solid var(--bg-green);
+    font-size: 1.1rem;
+    color: var(--bg-white);
+    background-color: var(--bg-green);
     border-radius: 0.2rem;
     cursor: pointer;
 }
-.btn-secondary{
-    border: 1px solid #D97706;
-    background-color: white;
-    color: #D97706;
-    padding: 0.4rem;
-}
+
 .btn-primary:hover{
-    color: #D97706;
-    background-color: white;
+    color: var(--bg-green);
+    background-color: var(--bg-white);
 }
 

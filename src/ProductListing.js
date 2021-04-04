@@ -4,6 +4,8 @@ import Card from "./Card"
 import axios from "axios";
 import "./styles.css";
 import { useCart } from './cartContext';
+import {MdSort} from "react-icons/md"
+import {FiFilter} from "react-icons/fi"
 
 function ProductListing() {
     const {products,setProducts} = useCart()
@@ -94,8 +96,15 @@ function ProductListing() {
                   </label>
               </div>
           </div>
+          <div className="sort__filter">
+              <span style={{borderRight:"2px solid grey",width:"34vw",fontSize:"20px",margin:"0 22px"}}>Sort By
+              <MdSort size={20} style={{margin:"0 10px"}}/>
+              </span>
+              <span style={{fontSize:"20px"}}>Filter
+                <FiFilter size={20} style={{margin:"0 10px"}}/>
+              </span>
+              </div>
             <div className="app-cart">
-            {/* <h1>Products</h1> */}
                 {filteredData.map((item) => (
                 <Card 
                 id={item.id} 
@@ -105,6 +114,8 @@ function ProductListing() {
                 ratings={item.ratings}
                 inStock={item.inStock}
                 fastDelivery={item.fastDelivery}
+                discount={item.discount}
+                actualPrice={item.actualPrice}
                 />
                   ))}
               </div>

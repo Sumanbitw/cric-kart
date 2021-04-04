@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useCart } from './cartContext'
+import Modal from "./Modal"
 import "./cart.css"
 
 
 function ShowWishList({item}){
+    const [showModal, setShowModal] = useState(false)
     console.log({item})
-    const {itemsInCart,setItemsInCart, wishList,setWishList} = useCart()
+    const {itemsInCart,setItemsInCart} = useCart()
 function wishListToCart(items){
     let inCart = false
     setItemsInCart(itemsInCart.map(currItems => {
@@ -24,9 +26,12 @@ function wishListToCart(items){
     )
 }
 
-function removeItemsFromWishList(items){
-    setWishList(wishList.filter(currItems => currItems.id !== items.id))
-    }
+// function removeItemsFromWishList(items){
+//     setWishList(wishList.filter(currItems => currItems.id !== items.id))
+//     }
+
+const open = () => setShowModal(true)
+const close = () => setShowModal(false)
     return (
         <div>
             <div className="cart__list">
@@ -41,7 +46,8 @@ function removeItemsFromWishList(items){
             </span><br/>
             <div className="btn__wishList">
                 <button className="btn-primary" onClick={() => wishListToCart(item) } ><i className="fa fa-shopping-cart"> Add to Bag </i></button>
-                <button onClick={() => removeItemsFromWishList(item)} className="btn-primary">Remove</button>
+                <button onClick={open} className="btn-primary">Remove</button>
+                <Modal showModal={showModal} close={close} item={item}/>
                 </div>
                 </div>
                 </div>
