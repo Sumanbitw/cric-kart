@@ -11,7 +11,7 @@ export default function Modal({showModal, close,item}) {
     return (
         <div className={showModal ? "overlay" : "hide__modal"} onClick={close}>
            <div className ={showModal ? "show__modal" : "hide__modal"}>
-           <p>Modal</p>
+           <p>Do you want to remove the item ? </p>
            <button onClick={() => removeItemsFromWishList(item)}>Remove</button>
             </div> 
 

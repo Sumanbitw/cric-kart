@@ -79,10 +79,13 @@ li{
     margin-top: 1.5rem;
     border: 1px solid var(--bg-black);
 }
+.nav__search{
+    position: relative;
+}
 .search__icon{
     position: absolute;
     top: 2rem;
-    right: 26rem;
+    left: 25rem;
 }
 
 @media screen and (max-width:800px){

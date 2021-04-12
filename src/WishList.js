@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useCart } from './cartContext'
 import Modal from "./Modal"
+import wishlist from "./Images/wishlist.svg"
 import "./cart.css"
 
 
@@ -33,11 +34,11 @@ function wishListToCart(items){
 const open = () => setShowModal(true)
 const close = () => setShowModal(false)
     return (
-        <div>
+        <div className="wishlist__items">
             <div className="cart__list">
-                <div>
+                
                 <img src={item.image} alt="" />
-                </div>
+            
                 <div className="cart__name">
                 <span className="cart__item">{item.name}</span><br/>
                 <span className="cart__price">
@@ -45,8 +46,8 @@ const close = () => setShowModal(false)
                 <b>{item.price}</b>
             </span><br/>
             <div className="btn__wishList">
-                <button className="btn-primary" onClick={() => wishListToCart(item) } ><i className="fa fa-shopping-cart"> Add to Bag </i></button>
-                <button onClick={open} className="btn-primary">Remove</button>
+                <button className="btn-primary btn__bag" onClick={() => wishListToCart(item) } ><i className="fa fa-shopping-cart"> Add to Bag </i></button>
+                <button onClick={open} className="btn-primary btn__remove">Remove</button>
                 <Modal showModal={showModal} close={close} item={item}/>
                 </div>
                 </div>
@@ -57,9 +58,9 @@ const close = () => setShowModal(false)
 function WishList() {
     const {wishList} = useCart()
     return (
-        <div>
-            <div>
-            <h1>WishList : {(wishList.length) === 0 ? "WishList is empty" : (wishList.length) }</h1>
+        <div className="whishlist">
+        {(wishList.length) === 0 ? <div className="cart__items wishlist"><img src={wishlist}/><p style={{fontSize:"25px",margin:"1rem",color:"grey"}}>WishList is Empty</p></div> : <p style={{fontSize:"25px",margin:"1rem"}}>Wishlist : ({wishList.length})  </p>}
+            <div className="wishlist__container">
             {wishList.map(item => (
                 <ul>
                     <ShowWishList item={item}/>

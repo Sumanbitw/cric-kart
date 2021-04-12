@@ -12,10 +12,10 @@ export default function Navbar (){
         <header>
           <nav>
                 <p onClick={() => setRoute("products")} className="navbar__header">Crickart</p>
-    
+                <div className="nav__search">
                 <input type = "text" placeholder="Search for products, brands and more"  className="navbar__input"/>
                 <BiSearch className="search__icon" size={20}/>
-            
+                </div>
               <ul>
                 <li  onClick={()=>setRoute("cart")}><AiOutlineShoppingCart size={30} cursor="pointer"/><span className="cart__icon"><b> {itemsInCart.length}</b></span></li>
                 <li  onClick={()=>setRoute("wishlist")}><AiOutlineHeart size={30} cursor="pointer"/><span className="cart__icon"><b>{wishList.length}</b></span></li> 
