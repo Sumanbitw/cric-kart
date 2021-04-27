@@ -1,6 +1,6 @@
 # exercise box
 
 ## About the setup
--Tis is a dev branch
+-This is a dev branch
 
 
